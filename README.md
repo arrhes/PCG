@@ -3,58 +3,45 @@
 ## Informations
 Le plan des comptes complet au format **JSON**.
 
-Les données sont répliquées depuis le Plan Comptable Général (PCG) français émis chaque année par l'[Autorité des Normes Comptables](https://www.anc.gouv.fr/sites/anc/accueil.html) (ANC).
+Les données sont répliquées depuis le Plan Comptable Général (PCG) français émis chaque année par l'[Autorité des Normes Comptables](https://www.anc.gouv.fr) (ANC).
 
 
-## Sources
-| Version | Source ANC                                                                                                                                                       | Document                         |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| 2024    | [Lien](https://www.anc.gouv.fr/files/live/sites/anc/files/contributed/ANC/1_Normes_fran%c3%a7aises/Reglements/Recueils/PCG_Janvier2024/PCG-01-01-2024.pdf)       | [Lien](sources/pcg_20240101.pdf) |
-| 2023    | [Lien](https://www.anc.gouv.fr/files/live/sites/anc/files/contributed/ANC/1_Normes_fran%c3%a7aises/Reglements/Recueils/PCG_Janvier2023/PCG_1er-janvier-2023.pdf) | [Lien](sources/pcg_20230101.pdf) |
+## Liens
+| Version | Consolidée (Source ANC) | Consolidée (Source PDF) | Recueil (Source ANC) | Recueil (Source PDF) | Structure |
+| ------- | -------------- | -------------- | ----------- | ----------- | --------- |
+| 2026    | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf) | [Lien](Liens/pcg_20260101.pdf) | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/Recueil-PCG-Janvier-2026.pdf) | [Lien](Liens/recueil_20260101.pdf) | [Lien](versions/2026/README.md) |
+| 2025    | Non disponible | Non disponible | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_Janvier2025/Recueil-NF-Janvier-2025.pdf) | [Lien](Liens/recueil_20250101.pdf) | [Lien](versions/2025/README.md) |
+| 2024    | Non disponible | [Lien](Liens/pcg_20240101.pdf) | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/Recueil%20comptable%20entreprises/2024/Recueil_normes-comptables2024.pdf) | [Lien](Liens/recueil_20240101.pdf) | [Lien](versions/2024/README.md) |
+| 2023    | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_Janvier2023/PCG_1er-janvier-2023.pdf) | [Lien](Liens/pcg_20230101.pdf) | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/Recueil%20comptable%20entreprises/2023/Recueil-normes-comptables_2023.pdf) | [Lien](Liens/recueil_20230101.pdf) | [Lien](versions/2023/README.md) |
 
 
 ## Structure
-Les différentes versions sont à retrouver dans le dossier [*versions*](versions). Chaque fichier **JSON** prend la forme d'une liste d'élements dont la structure est la suivante :
-| Clé        | Type                                 | Description                                                                                                                                                                                                                                                                                                                                                                    |
-| ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `number`   | `int`                                | Le numéro du compte.                                                                                                                                                                                                                                                                                                                                                           |
-| `label`    | `string`                             | Le libellé du compte.                                                                                                                                                                                                                                                                                                                                                          |
-| `system`   | `"condensed"` `"base"` `"developed"` | Le système minimal dans lequel s'inscrit le compte. Notez bien que le système développé contient tous les comptes du système de base qui contient lui-même tous les comptes du système abrégé. <br/> `condensed` si le compte est dans le système abrégé. <br/> `base` si le compte est dans le système de base. <br/> `developed` si le compte est dans le système développé. |
-| `accounts` | `array`                              | La liste des sous-comptes, reprenant la même structure de manière récursive.                                                                                                                                                                                                                                                                                                   |
+Les différentes versions sont à retrouver dans le dossier [*versions*](versions), organisées par année. Chaque dossier contient les fichiers suivants ainsi qu'un `README.md` décrivant la structure des données :
 
-## Extrait
-```js
-[
-    {
-        "number": 1,
-        "label": "Capitaux",
-        "system": "condensed",
-        "accounts": [
-            {
-                "number": 10,
-                "label": "Capital et réserves",
-                "system": "base",
-                "accounts": [
-                    {
-                        "number": 101,
-                        "label": "Capital",
-                        "system": "condensed",
-                        "accounts": [
-                            {
-                                "number": 1011,
-                                "label": "Capital souscrit - non appelé",
-                                "system": "developed",
-                                "accounts": []
-                            },
-                            ...
-                        ]
-                    },
-                    ...
-                ]
-            },
-            ...
-        ]
-    },
-    ...
-]
+- **`nested.json`** — Version hiérarchique avec sous-comptes imbriqués.
+- **`flat.json`** — Version à plat avec référence au compte parent.
+- **`diff.json`** — Différences par rapport à la version précédente (absent pour la première version).
+
 ```
+versions/
+├── 2023/
+│   ├── nested.json
+│   ├── flat.json
+│   └── README.md
+├── 2024/
+│   ├── nested.json
+│   ├── flat.json
+│   ├── diff.json
+│   └── README.md
+├── 2025/
+│   ├── nested.json
+│   ├── flat.json
+│   ├── diff.json
+│   └── README.md
+└── 2026/
+    ├── nested.json
+    ├── flat.json
+    ├── diff.json
+    └── README.md
+```
+
