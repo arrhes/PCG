@@ -7,12 +7,12 @@ Les données sont répliquées depuis le Plan Comptable Général (PCG) françai
 
 
 ## Liens
-| Version | Consolidée (Source ANC) | Consolidée (Source PDF) | Recueil (Source ANC) | Recueil (Source PDF) | Structure |
-| ------- | -------------- | -------------- | ----------- | ----------- | --------- |
-| 2026    | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf) | [Lien](Liens/pcg_20260101.pdf) | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/Recueil-PCG-Janvier-2026.pdf) | [Lien](Liens/recueil_20260101.pdf) | [Lien](versions/2026/README.md) |
-| 2025    | Non disponible | Non disponible | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_Janvier2025/Recueil-NF-Janvier-2025.pdf) | [Lien](Liens/recueil_20250101.pdf) | [Lien](versions/2025/README.md) |
-| 2024    | Non disponible | [Lien](Liens/pcg_20240101.pdf) | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/Recueil%20comptable%20entreprises/2024/Recueil_normes-comptables2024.pdf) | [Lien](Liens/recueil_20240101.pdf) | [Lien](versions/2024/README.md) |
-| 2023    | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_Janvier2023/PCG_1er-janvier-2023.pdf) | [Lien](Liens/pcg_20230101.pdf) | [Lien](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/Recueil%20comptable%20entreprises/2023/Recueil-normes-comptables_2023.pdf) | [Lien](Liens/recueil_20230101.pdf) | [Lien](versions/2023/README.md) |
+| Version | Consolidée  | Recueil  | Structure |
+| ------- | -------------- | ----------- | --------- |
+| 2026    | [Lien ANC](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf) · [Lien répertoire](sources/pcg_20260101.pdf) | [Lien ANC](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/Recueil-PCG-Janvier-2026.pdf) · [Lien répertoire](sources/recueil_20260101.pdf) | [Lien](versions/2026/README.md) |
+| 2025    | Non disponible · [Lien répertoire](sources/pcg_20240101.pdf) | [Lien ANC](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_Janvier2025/Recueil-NF-Janvier-2025.pdf) · [Lien répertoire](sources/recueil_20250101.pdf) | [Lien](versions/2025/README.md) |
+| 2024    | Non disponible · [Lien répertoire](sources/pcg_20240101.pdf) | [Lien ANC](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/Recueil%20comptable%20entreprises/2024/Recueil_normes-comptables2024.pdf) · [Lien répertoire](sources/recueil_20240101.pdf) | [Lien](versions/2024/README.md) |
+| 2023    | [Lien ANC](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_Janvier2023/PCG_1er-janvier-2023.pdf) · [Lien répertoire](sources/pcg_20230101.pdf) | [Lien ANC](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/Recueil%20comptable%20entreprises/2023/Recueil-normes-comptables_2023.pdf) · [Lien répertoire](sources/recueil_20230101.pdf) | [Lien](versions/2023/README.md) |
 
 Certains liens du site de l'ANC ne fonctionnent pas. Nous les avons contactés à ce sujet, sans réponse pour le moment.
 
