@@ -1,0 +1,11 @@
+[project]
+name = "pcg-scripts"
+version = "0.1.0"
+description = "Scripts for processing PCG (Plan Comptable Général) PDF sources"
+requires-python = ">=3.11"
+dependencies = [
+    "pymupdf>=1.25",
+]
+
+[project.scripts]
+pdf2html = "pdf2html:main"
