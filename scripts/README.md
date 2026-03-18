@@ -32,26 +32,16 @@ uv run pdf2html.py --all --output-dir out
 
 Par défaut, les fichiers HTML sont créés dans le même répertoire que les PDF sources.
 
-### `pdf2md.py` — Conversion PDF vers Markdown
-
-Convertit les PDF sources en Markdown à l'aide de [PyMuPDF](https://pymupdf.readthedocs.io/). Préserve le gras/italique, détecte les niveaux de titre à partir de la taille des polices, conserve les liens internes et gère l'italique synthétique (texte en cisaillement utilisé pour les comptes facultatifs).
-
-```bash
-# Convertir les PDF d'une année spécifique
-uv run pdf2md.py --year 2026
-
-# Convertir tous les PDF
-uv run pdf2md.py --all
-
-# Spécifier un répertoire de sortie
-uv run pdf2md.py --all --output-dir out
-```
-
-Par défaut, les fichiers Markdown sont créés dans le même répertoire que les PDF sources.
-
 ### `html2md.py` — Conversion HTML vers Markdown
 
-Convertit les fichiers HTML sources (générés par `pdf2html.py`) en Markdown à l'aide de [html-to-markdown](https://github.com/kreuzberg-dev/html-to-markdown). Les images embarquées sont ignorées.
+Convertit les fichiers HTML (générés par `pdf2html.py`) en Markdown structuré. Le parseur analyse le positionnement CSS absolu et les styles inline pour reconstruire la structure du document :
+
+- **Titres** détectés à partir de la taille des polices (20pt → h1, 14pt → h2, 12pt → h3, 10.6pt → h4)
+- **Gras / italique** préservés (`<b>`, `font-style:italic`)
+- **Liens internes** reconstitués à partir des surcouches `<a>` positionnées en absolu
+- **Table des matières** : les points de suite (dot leaders) sont supprimés, les entrées restent du texte (non des titres)
+- **Plan de comptes** : les fragments `<p>` à la même coordonnée verticale sont fusionnés sur une seule ligne
+- **En-têtes / pieds de page** répétitifs supprimés automatiquement
 
 ```bash
 # Convertir les HTML d'une année spécifique
@@ -65,5 +55,3 @@ uv run html2md.py --all --output-dir out
 ```
 
 Par défaut, les fichiers Markdown sont créés dans le même répertoire que les HTML sources.
-
-> **Note :** les fichiers HTML sources utilisent un positionnement CSS absolu (réplique visuelle du PDF), sans structure sémantique (`<h1>`–`<h6>`, `<em>`, etc.). Le résultat est donc moins structuré que celui de `pdf2md.py`, qui extrait les métadonnées directement du PDF.

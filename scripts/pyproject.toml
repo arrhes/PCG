@@ -4,11 +4,9 @@ version = "0.1.0"
 description = "Scripts for processing PCG (Plan Comptable Général) PDF sources"
 requires-python = ">=3.11"
 dependencies = [
-    "html-to-markdown>=2.28",
     "pymupdf>=1.25",
 ]
 
 [project.scripts]
 html2md = "html2md:main"
 pdf2html = "pdf2html:main"
-pdf2md = "pdf2md:main"
