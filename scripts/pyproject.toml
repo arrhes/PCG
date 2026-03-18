@@ -9,4 +9,3 @@ dependencies = [
 
 [project.scripts]
 pdf2html = "pdf2html:main"
-json2md = "json2md:main"
