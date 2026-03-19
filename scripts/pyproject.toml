@@ -8,4 +8,5 @@ dependencies = [
 ]
 
 [project.scripts]
+html2md = "html2md:main"
 pdf2html = "pdf2html:main"
