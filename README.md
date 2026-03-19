@@ -9,10 +9,10 @@ Les données sont récupérées depuis le Plan Comptable Général (PCG) frança
 ## Liens
 | Version | Consolidée | Recueil  | Structure |
 | ------- | -------------- | ----------- | --------- |
-| 2026    | [PDF](sources/2026/pcg_20260101.pdf) · [HTML](sources/2026/pcg_20260101.html) | [PDF](sources/2026/recueil_20260101.pdf) · [HTML](sources/2026/recueil_20260101.html) | [README](versions/2026/README.md) |
-| 2025    | [PDF](sources/2025/pcg_20250101.pdf) · [HTML](sources/2025/pcg_20250101.html) | [PDF](sources/2025/recueil_20250101.pdf) · [HTML](sources/2025/recueil_20250101.html) | [README](versions/2025/README.md) |
-| 2024    | [PDF](sources/2024/pcg_20240101.pdf) · [HTML](sources/2024/pcg_20240101.html) | [PDF](sources/2024/recueil_20240101.pdf) · [HTML](sources/2024/recueil_20240101.html) | [README](versions/2024/README.md) |
-| 2023    | [PDF](sources/2023/pcg_20230101.pdf) · [HTML](sources/2023/pcg_20230101.html) | [PDF](sources/2023/recueil_20230101.pdf) · [HTML](sources/2023/recueil_20230101.html) | [README](versions/2023/README.md) |
+| 2026    | [.pdf](sources/2026/pcg_20260101.pdf) · [.html](sources/2026/pcg_20260101.html) · [.md](sources/2026/pcg_20260101.md) | [.pdf](sources/2026/recueil_20260101.pdf) · [.html](sources/2026/recueil_20260101.html) · [.md](sources/2026/recueil_20260101.html) | [README](versions/2026/README.md) |
+| 2025    | [.pdf](sources/2025/pcg_20250101.pdf) · [.html](sources/2025/pcg_20250101.html) · [.md](sources/2025/pcg_20250101.md) | [.pdf](sources/2025/recueil_20250101.pdf) · [.html](sources/2025/recueil_20250101.html) · [.md](sources/2025/recueil_20250101.html) | [README](versions/2025/README.md) |
+| 2024    | [.pdf](sources/2024/pcg_20240101.pdf) · [.html](sources/2024/pcg_20240101.html) · [.md](sources/2024/pcg_20240101.md) | [.pdf](sources/2024/recueil_20240101.pdf) · [.html](sources/2024/recueil_20240101.html) · [.md](sources/2024/recueil_20240101.html) | [README](versions/2024/README.md) |
+| 2023    | [.pdf](sources/2023/pcg_20230101.pdf) · [.html](sources/2023/pcg_20230101.html) · [.md](sources/2023/pcg_20230101.md) | [.pdf](sources/2023/recueil_20230101.pdf) · [.html](sources/2023/recueil_20230101.html) · [.md](sources/2023/recueil_20230101.html) | [README](versions/2023/README.md) |
 
 Les documents en format `.pdf` proviennent de cette [source](https://www.anc.gouv.fr/normes-comptables-francaises/recueils-des-normes-comptables). Certains liens ne fonctionnent cependant plus. 
 Nous avons contactés l'ANC à ce sujet, sans réponse pour le moment.
