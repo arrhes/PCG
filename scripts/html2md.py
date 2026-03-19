@@ -97,19 +97,23 @@ def _is_header_or_footer(text: str) -> bool:
 def _wrap_style(text: str, *, bold: bool, italic: bool) -> str:
     """Wrap *text* with Markdown bold/italic markers.
 
-    Trailing whitespace is moved outside the markers.
+    Leading and trailing whitespace is moved outside the markers so that
+    ``*`` / ``**`` are always adjacent to non-space characters (required
+    by CommonMark for emphasis to be recognised).
     """
     if not bold and not italic:
         return text
-    stripped = text.rstrip()
-    trailing = text[len(stripped):]
+    lstripped = text.lstrip()
+    leading = text[: len(text) - len(lstripped)]
+    stripped = lstripped.rstrip()
+    trailing = lstripped[len(stripped):]
     if not stripped:
         return text
     if bold and italic:
-        return f"***{stripped}***{trailing}"
+        return f"{leading}***{stripped}***{trailing}"
     if bold:
-        return f"**{stripped}**{trailing}"
-    return f"*{stripped}*{trailing}"
+        return f"{leading}**{stripped}**{trailing}"
+    return f"{leading}*{stripped}*{trailing}"
 
 
 def _merge_styled_runs(
