@@ -3087,7 +3087,7 @@
         },
         {
             "number": 6037,
-            "label": "Variation des stocks de marchandises 61/62 Autres charges externes",
+            "label": "Variation des stocks de marchandises",
             "system": "minimal",
             "parent": 603
         },
@@ -8252,7 +8252,7 @@
                                 },
                                 {
                                     "number": 6037,
-                                    "label": "Variation des stocks de marchandises 61/62 Autres charges externes",
+                                    "label": "Variation des stocks de marchandises",
                                     "system": "minimal",
                                     "accounts": []
                                 }
@@ -15997,7 +15997,7 @@
                 "number": 6037,
                 "label": {
                     "from": "Variation des stocks de marchandises",
-                    "to": "Variation des stocks de marchandises 61/62 Autres charges externes"
+                    "to": "Variation des stocks de marchandises"
                 },
                 "system": {
                     "from": "base",
