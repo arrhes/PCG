@@ -43,3 +43,7 @@ versions/
     ├── pcg_2026.schema.json
     └── README.md
 ```
+
+
+## Projets similaires
+- [PCG-GPL](https://github.com/SVGAnimate/PCG-GPL) — Plan Comptable Général sous GPL, avec scraping des données depuis les formats PDF et SVG (PHP).
